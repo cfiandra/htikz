@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{listings}
+\lstset{language=[LaTeX]TeX,basicstyle={\footnotesize}}
+
+\usepackage{amsmath,amssymb}
+\usepackage[customcolors]{htikz}
+\usepackage{xcolor}
+
+
+\setfillcolor{blue!10}
+\setbordercolor{blue}
+
+\begin{document}
+Some equations:
+ \begin{align}
+      \tikzmarkin{a1}a_i\tikzmarkend{a1} + b_j = 10 \\
+     \tikzmarkin{c}c_j + d_j + a_i >= 30 \tikzmarkend{c}
+ \end{align}
+
+\[\tikzmarkin{a}x+y=400\tikzmarkend{a}\]
+
+\[\exttikzmarkin{r}\dfrac{100}{x}\exttikzmarkend{r}\]
+
+A integral:
+\setfillcolor{red!10}
+\setbordercolor{red}
+\begin{equation}V(z)=\sum_{\kappa=0}^{\infty}{\; \exttikzmarkin{k} \int_{0}^{\infty}{\dfrac{\mathrm{e}^{-\lambda x}\cdot (\lambda x)^\kappa}{\kappa!} \, b(x)\,\mathrm{d} x}\cdot z^\kappa \exttikzmarkend{k}}\end{equation}
+
+The code used:
+\begin{lstlisting}
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\usepackage[customcolors]{htikz}
+\usepackage{xcolor}
+
+\setfillcolor{blue!10}
+\setbordercolor{blue}
+
+\begin{document}
+Some equations:
+\begin{align}
+\tikzmarkin{a1}a_i\tikzmarkend{a1} + b_j = 10 \\
+\tikzmarkin{c}c_j + d_j + a_i >= 30 \tikzmarkend{c}
+\end{Huge}
+
+\[\tikzmarkin{a}x+y=400\tikzmarkend{a}\]
+
+A integral:
+\begin{equation}
+V(z)=\sum_{\kappa=0}^{\infty}{\; \exttikzmarkin{k} \int_{0}^{\infty}{
+\dfrac{\mathrm{e}^{-\lambda x}\cdot (\lambda x)^\kappa}{\kappa!} \, b(x)\,\mathrm{d} x}
+\cdot z^\kappa \exttikzmarkend{k}}
+\end{equation}
+\end{lstlisting}
+
+\end{document}
