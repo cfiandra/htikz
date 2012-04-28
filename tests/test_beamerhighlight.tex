@@ -1,0 +1,60 @@
+\documentclass{beamer}
+\usepackage{amsmath,amssymb}
+\usepackage[beamer]{htikz}
+
+\usepackage{listings}
+\lstset{language=[LaTeX]TeX,basicstyle={\tiny}}
+
+\usetheme{Singapore}
+
+\begin{document}
+
+\begin{frame}{The equations}
+\begin{block}{The system}
+ \begin{align}
+      \tikzmarkin<1->{a1}a_i\tikzmarkend{a1} + b_j = 10 \\
+     \tikzmarkin<3>{c}c_j + d_j + \tikzmarkin<2>{b}a_i\tikzmarkend{b} >= 30\tikzmarkend{c}
+ \end{align}
+\end{block}
+\end{frame}
+
+\begin{frame}{Other equations}
+\[\exttikzmarkin<1->{a}\dfrac{x^2}{y}\exttikzmarkend{a}=\exttikzmarkin<2>{x}\dfrac{100}{27}\exttikzmarkend{x}\]
+
+\begin{equation}\exttikzmarkin<4>{t} \sum_i^x{\alpha}\exttikzmarkend{t}+\int_i^x{x}\end{equation}
+\end{frame}
+
+\begin{frame}[fragile]{The code}
+\begin{lstlisting}
+ \documentclass{beamer}
+ \usepackage{amsmath,amssymb}
+ \usepackage[beamer]{htikz}
+
+ \usetheme{Singapore}
+
+ \begin{document}
+ \begin{frame}{The equations}
+ \begin{block}{The system}
+ \begin{align}
+ \tikzmarkin<1->{a1}a_i\tikzmarkend{a1} + b_j = 10 \\
+ \tikzmarkin<3>{c}c_j + d_j + \tikzmarkin<2>{b}a_i\tikzmarkend{b} >= 30\tikzmarkend{c}
+ \end{align}
+ \end{block}
+ \end{frame}
+
+ \begin{frame}{Other equations}
+ \[\exttikzmarkin<1->{a}\dfrac{x^2}{y}\exttikzmarkend{a}=
+ \exttikzmarkin<2>{x}\dfrac{100}{27}\exttikzmarkend{x}\]
+
+ \begin{equation}
+ \exttikzmarkin<4>{t} \sum_i^x{\alpha}\exttikzmarkend{t}+\int_i^x{x}
+ \end{equation}
+ \end{frame}
+\end{lstlisting}
+
+\end{frame}
+
+\end{document}
+
+
+
